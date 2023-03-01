@@ -1,0 +1,5 @@
+@import './Base/app';
+@import './Components/navbar';
+@import './Pages/home';
+@import './Utils/variables';
+@import './Vendors/bootstrap'; // Bootstrap is imported in last position, in order to take the customized value from _variables.scss and other.
