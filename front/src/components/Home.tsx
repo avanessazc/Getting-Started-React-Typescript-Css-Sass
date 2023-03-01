@@ -3,23 +3,21 @@ import { Blog } from '../types'
 import BlogList from './BlogList'
 
 const Home = () => {
-  const [blogs, setBlogs] = useState<Blog[]>([
-    { title: 'My new website', body: 'lorem ipsum...', author: 'mario', id: 1 },
-    { title: 'Welcome party!', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
-    { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'mario', id: 3 },
-  ])
-
-  const handleDelete = (id: number) => {
-    const newBlogs = blogs.filter((blog: Blog) => blog.id !== id)
-    setBlogs(newBlogs)
-  }
-
+  const [blogs, setBlogs] = useState<Blog[]>([])
+  
   useEffect(() => {
-    console.log('use effect ran')
+    fetch('http://0.0.0.0:3000/blogs')
+    .then((res) => {
+      // console.log('res:', res);
+      return res.json();
+    }).then((data) => {
+      console.log(data);
+      setBlogs(data);
+    })
   }, [])
   return (
     <div className='home'>
-      <BlogList blogs={blogs} title='All Blogs!' handleDelete={handleDelete} />
+      {blogs && <BlogList blogs={blogs} title='All Blogs!' />}
     </div>
   )
 }
