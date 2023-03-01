@@ -1,31 +1,28 @@
-import React, { MouseEvent } from 'react';
+import { useState } from 'react'
 
 const Home = () => {
-  const handleClick = (e: MouseEvent) => {
-    console.log('Holas', e)
+  const [name, setName] = useState<string>('Vanessa')
+  const [age, setAge] = useState<number>(33)
+  const handleClick = () => {
+    setName('Luigi')
+    setAge(45)
+    console.log(name)
   }
-  const handleClick2 = (name: string, e: MouseEvent) => {
-    console.log('Hola', name, e.target)
-  }
+  // const handleClick2 = (name: string, e: MouseEvent) => {
+  //   console.log('Hola', name, e.target)
+  // }
   return (
     <div className='home'>
       <h2>HomePage</h2>
-      <button
-        onClick={(e) => {
-          handleClick(e)
-        }}
-      >
-        Click me
-      </button>
-      <button
-        onClick={(e) => {
-          handleClick2('Vanessa', e)
-        }}
-      >
-        Click me2
-      </button>
+      <p>
+        {name} is {age} years old
+      </p>
+      <button onClick={handleClick}>Click me</button>
     </div>
   )
 }
 
+// anonymous function to call another functions
+// when function does not have parametres, it could be passed as reference
+// import React, { MouseEvent } from 'react'
 export default Home
