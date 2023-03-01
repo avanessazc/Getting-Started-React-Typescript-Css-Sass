@@ -19,6 +19,21 @@ services:
   #     timeout: 3s
   #     retries: 3
   #   restart: unless-stopped
+  json-server:
+    build: ./back
+    container_name: json-server_c
+    ports:
+        - "3000:3000"
+        - "4000:4000"
+    networks:
+      - internal
+    volumes:
+      - type: bind
+        source: ./back/data
+        target: /usr/src/app/back/data
+    restart: unless-stopped
+    command: npm run json-server
+    # command: tail -f /dev/null
   react:
     build: ./front
     ports:

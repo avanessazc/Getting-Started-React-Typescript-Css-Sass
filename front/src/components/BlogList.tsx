@@ -1,11 +1,12 @@
 import { Blog } from '../types'
 
-type BlogListProps = { 
-    blogs: Blog[];
-    title: string;
-    handleDelete: (id: number) => void }
+type BlogListProps = {
+  blogs: Blog[]
+  title: string
+  handleDelete: (id: number) => void
+}
 
-const BlogList = ({ blogs, title, handleDelete}: BlogListProps) => {
+const BlogList = ({ blogs, title, handleDelete }: BlogListProps) => {
   return (
     <div className='blog-list'>
       <h2>{title}</h2>
