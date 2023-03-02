@@ -7,7 +7,7 @@ type BlogListProps = {
 
 const BlogList = ({ blogs, title }: BlogListProps) => {
   return (
-    <div className='blog-list'>
+    <div>
       <h2>{title}</h2>
       {blogs.map((blog: Blog) => (
         <div className='blog-preview' key={blog.id}>

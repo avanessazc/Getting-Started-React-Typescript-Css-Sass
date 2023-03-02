@@ -1,3 +1,4 @@
+/* blog previews / list */
 .blog-preview {
     padding: 10px 16px;
     margin: 20px 0;
@@ -9,5 +10,8 @@
         font-size: 20px;
         color: #f1356d;
         margin-bottom: 8px;
+    }
+    a {
+        text-decoration: none;
     }
 }
