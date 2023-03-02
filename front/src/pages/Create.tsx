@@ -42,13 +42,12 @@ const Create = () => {
           onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setBody(e.target.value)}
         ></textarea>
         <label>Blog author:</label>
-        <select
+        <input
+          type='text'
+          required
           value={author}
-          onChange={(e: ChangeEvent<HTMLSelectElement>) => setAuthor(e.target.value)}
-        >
-          <option value='mario'>mario</option>
-          <option value='yoshi'>yoshi</option>
-        </select>
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setAuthor(e.target.value)}
+        />
         {!isPending && <button>Add Blog</button>}
         {isPending && <p>Adding blog....</p>}
       </form>

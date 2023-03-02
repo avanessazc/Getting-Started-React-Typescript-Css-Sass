@@ -8,9 +8,6 @@ RUN apk add --update nodejs npm
 
 COPY package*.json ./
 
-# # Install package.json dependencies.
 RUN npm install
 
-# COPY .env ./
-# COPY tsconfig.json ./
 COPY . .

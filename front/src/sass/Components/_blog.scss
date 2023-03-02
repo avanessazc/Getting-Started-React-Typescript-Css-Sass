@@ -8,7 +8,7 @@
     }
     h2 {
         font-size: 20px;
-        color: #f1356d;
+        color: $title_color;
         margin-bottom: 8px;
     }
     a {
@@ -20,14 +20,15 @@
 .blog-details {
     h2 {
         font-size: 20px;
-        color: #f1356d;
+        color: $title_color;
         margin-bottom: 10px;
     }
     div {
         margin: 20px 0;
+        text-align: justify;
     }
     button {
-        background: #f1356d;
+        background: $title_color;
         color: #fff;
         border: 0;
         padding: 8px;

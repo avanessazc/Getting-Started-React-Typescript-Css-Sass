@@ -1,4 +1,3 @@
-// import { useState, useEffect } from 'react'
 import { Blog } from '../types'
 import BlogList from '../components/BlogList'
 import useFetch from '../components/hooks/useFetch'
@@ -18,7 +17,4 @@ const Home = () => {
   )
 }
 
-// anonymous function to call another functions
-// when function does not have parametres, it could be passed as reference
-// import React, { MouseEvent } from 'react'
 export default Home

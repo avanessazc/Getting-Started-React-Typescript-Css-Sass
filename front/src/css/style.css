@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700&display=swap");
 /* base styles */
 * {
   margin: 0;
-  font-family: 'Quicksand';
+  font-family: "Shantell Sans";
   color: #333;
+  background-color: rgb(237, 239, 246);
 }
 
 .navbar {
@@ -15,7 +16,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #9c35f1;
 }
 .navbar .links {
   margin-left: auto;
@@ -26,7 +27,7 @@
   padding: 6px;
 }
 .navbar a:hover {
-  color: #f1356d;
+  color: #9c35f1;
 }
 
 .content {
@@ -46,7 +47,7 @@
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #9c35f1;
   margin-bottom: 8px;
 }
 .blog-preview a {
@@ -56,19 +57,34 @@
 /* blog details page */
 .blog-details h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #9c35f1;
   margin-bottom: 10px;
 }
 .blog-details div {
   margin: 20px 0;
+  text-align: justify;
 }
 .blog-details button {
-  background: #f1356d;
+  background: #9c35f1;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.fixed-bottom {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-top: 1px solid #f2f2f2;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 /* create new blog form */
@@ -83,7 +99,7 @@
 }
 .create h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #9c35f1;
   margin-bottom: 30px;
 }
 .create input,
@@ -97,7 +113,7 @@
   display: block;
 }
 .create button {
-  background: #f1356d;
+  background: #9c35f1;
   color: #fff;
   border: 0;
   padding: 8px;

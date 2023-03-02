@@ -1,4 +1,3 @@
-// import { MouseEvent } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import useFetch from './hooks/useFetch'
 import { Blog } from '../types'
@@ -13,9 +12,8 @@ const BlogDetails = () => {
   const history = useHistory()
   const handleDelete = () => {
     fetch('http://0.0.0.0:3000/blogs/' + blog.id, {
-      method: 'DELETE'
-    })
-    .then(() => {
+      method: 'DELETE',
+    }).then(() => {
       history.push('/')
     })
   }
