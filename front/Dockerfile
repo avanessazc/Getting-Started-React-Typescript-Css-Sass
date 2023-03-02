@@ -14,3 +14,5 @@ RUN npm install
 COPY .env ./
 COPY tsconfig.json ./
 COPY . .
+
+RUN npm install -g serve

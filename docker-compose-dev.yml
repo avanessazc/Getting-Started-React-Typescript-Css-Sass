@@ -23,10 +23,14 @@ services:
       - internal
     volumes:
       - type: bind
-        source: ./front/build
-        target: /usr/src/app/front/build
+        source: ./front/src
+        target: /usr/src/app/front/src
+      - type: bind
+        source: ./front/public
+        target: /usr/src/app/front/public
     restart: unless-stopped
-    command: serve -n -s build -l 8080
+    command: tail -f /dev/null
+    # command: npm run start
 networks: 
   internal:
     driver: bridge
