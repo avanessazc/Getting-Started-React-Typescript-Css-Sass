@@ -1,4 +1,5 @@
 import { Blog } from '../types'
+import { Link } from 'react-router-dom'
 
 type BlogListProps = {
   blogs: Blog[]
@@ -11,8 +12,10 @@ const BlogList = ({ blogs, title }: BlogListProps) => {
       <h2>{title}</h2>
       {blogs.map((blog: Blog) => (
         <div className='blog-preview' key={blog.id}>
-          <h2>{blog.title}</h2>
-          <p>Wittend by {blog.author}</p>
+          <Link to={`/blogs/${blog.id}`}>
+            <h2>{blog.title}</h2>
+            <p>Wittend by {blog.author}</p>
+          </Link>
         </div>
       ))}
     </div>
