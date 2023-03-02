@@ -1,7 +1,7 @@
 // import { useState, useEffect } from 'react'
 import { Blog } from '../types'
-import BlogList from './BlogList'
-import useFetch from '../hooks/useFetch'
+import BlogList from '../components/BlogList'
+import useFetch from '../components/hooks/useFetch'
 
 const Home = () => {
   const {
