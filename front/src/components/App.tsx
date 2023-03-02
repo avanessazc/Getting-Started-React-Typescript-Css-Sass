@@ -4,6 +4,7 @@ import Navbar from './Navbar'
 import Home from '../pages/Home'
 import Create from '../pages/Create'
 import BlogDetails from './BlogDetails'
+import NotFound from '../pages/NotFound'
 
 function App() {
   return (
@@ -15,11 +16,14 @@ function App() {
             <Route exact path='/'>
               <Home />
             </Route>
-            <Route exact path='/create'>
+            <Route path='/create'>
               <Create />
             </Route>
-            <Route exact path='/blogs/:id'>
+            <Route path='/blogs/:id'>
               <BlogDetails />
+            </Route>
+            <Route path='*'>
+              <NotFound />
             </Route>
           </Switch>
         </div>
