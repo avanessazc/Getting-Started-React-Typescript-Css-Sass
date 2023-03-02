@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 // import { Blog } from '../types';
 
 const useFetch = (url: string) => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState<any>()
   const [isPending, setIsPending] = useState<boolean>(true)
   const [error, setError] = useState<string>('')
 
   useEffect(() => {
     const abortCtrl = new AbortController()
 
+    // This setTimeout is just for testing "isPending" state
     setTimeout(() => {
       fetch(url, { signal: abortCtrl.signal })
         .then((res) => {
@@ -18,7 +19,7 @@ const useFetch = (url: string) => {
           return res.json()
         })
         .then((data) => {
-          console.log(data)
+          // console.log(data)
           setData(data)
           setIsPending(false)
           setError('')
