@@ -1,10 +1,12 @@
 import { useState, ChangeEvent, FormEvent } from 'react'
+import { useHistory } from 'react-router-dom'
 
 const Create = () => {
   const [title, setTitle] = useState<string>('')
   const [body, setBody] = useState<string>('')
   const [author, setAuthor] = useState<string>('')
   const [isPending, setIsPending] = useState<boolean>(false)
+  const history = useHistory()
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -18,6 +20,7 @@ const Create = () => {
       }).then(() => {
         console.log('New blog added')
         setIsPending(false)
+        history.push('/')
       })
     }, 1000)
   }
