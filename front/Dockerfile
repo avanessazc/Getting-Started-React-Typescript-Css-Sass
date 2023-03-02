@@ -16,3 +16,4 @@ COPY tsconfig.json ./
 COPY . .
 
 RUN npm install -g serve
+RUN npm run build

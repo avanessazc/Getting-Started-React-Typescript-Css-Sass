@@ -26,7 +26,8 @@
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
     "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}'",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "sass": "sass --watch ./src/sass/main.scss ./src/css/style.css"
+    "sass": "sass --watch ./src/sass/main.scss ./src/css/style.css",
+    "build-serve": "react-scripts build && serve -n -s build -l 8080"
   },
   "eslintConfig": {
     "extends": [
